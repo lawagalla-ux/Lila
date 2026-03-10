@@ -925,9 +925,3 @@ _ _           ✦ Lilac Moon Server 🌌✨ _ _"""
 
     # Make sure other commands still work
     await bot.process_commands(message)
-
-import os
-
-TOKEN = os.getenv("TOKEN")
-
-bot.run(TOKEN)
