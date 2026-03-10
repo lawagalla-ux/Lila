@@ -925,3 +925,20 @@ _ _           ✦ Lilac Moon Server 🌌✨ _ _"""
 
     # Make sure other commands still work
     await bot.process_commands(message)
+
+# ===============================
+# VARIABLE TOKEN LOADER
+# ===============================
+def run_bot():
+    # This looks for a variable in your system/host settings
+    token = os.getenv("DISCORD_TOKEN")
+    
+    if token:
+        print("✨ Token found in variables. Starting bot...")
+        bot.run(token)
+    else:
+        print("❌ Error: 'DISCORD_TOKEN' variable not found!")
+        print("Please add it to your Environment Variables or Secrets.")
+
+if __name__ == "__main__":
+    run_bot()
