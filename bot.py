@@ -928,4 +928,6 @@ _ _           ✦ Lilac Moon Server 🌌✨ _ _"""
 
 import os
 
-bot.run(os.getenv("TOKEN"))
+TOKEN = os.getenv("TOKEN")
+
+bot.run(TOKEN)
